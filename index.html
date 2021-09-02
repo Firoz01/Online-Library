@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--------------Boostrap CSS CDN link---------------->
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+
+    <!--------------CSS LINK----------------------------->
+
+    <link rel="stylesheet" href="./style.css">
+    <title>Online Library</title>
+</head>
+<body>
+
+   
+    <div class="bg-img">
+         <!---title text------>
+    <h1 class="text-center mt-2 mb-5" style="color: white;">Search your favorite Book</h1>
+
+
+    <!----Search Bar------->
+    <div class="input-group mb-3 w-50 mx-auto">
+      <input id="search-field" type="text" class="form-control" placeholder="Search the book you want" aria-label="Recipient's username" aria-describedby="button-addon2">
+      <button onclick="searchBook()" class="btn btn-outline-secondary" type="button" id="button-search">Search</button>
+    </div>
+
+
+    <!-------Boostrap Spinner------>
+    <div class="d-flex justify-content-center align-items-center mt-5" id="loading">
+        <div id="spinner" class="spinner-border"  role="status" style="display: none; color: white;">
+        
+        </div>
+    </div>
+
+
+    <!--------No Result Message-------->
+    <div class="d-flex justify-content-center align-items-center mt-5">
+        <h2 id="no-result" style="color: white; display: none;">No Result Found... Sorry!</h2>
+    </div>
+
+
+
+    <!------Search Result Area---------->
+
+    <section id="search-details" class="mt-2">
+
+        <!--Showing Total Result & Books------>
+       <div class="container mb-5">
+            <div id="total-result" class="mb-4" style="display: none;">
+                <h5 style="color: white">About <span id="result-found"></span> results found</h5>
+            </div>
+
+            <!---Books grid cards---->
+            <div id="search-result" class="row row-cols-1 row-cols-12 row-cols-md-2 row-cols-lg-4 g-3">
+            </div>
+
+       </div>
+
+       <!---footer----->
+        <div id="footer" style="display: none;">
+
+            <div class="d-flex justify-content-center align-items-center" style="height: 50px; background-color: rgb(87, 86, 86); color: white;">
+                <p>Copyright © Firoz 2021. Bangladesh</p>
+            </div>
+
+         </div>  
+
+    </section>
+
+  
+
+   
+
+
+
+    </div>
+
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+
+    <script src="./js/main.js"></script>
+</body>
+</html>
